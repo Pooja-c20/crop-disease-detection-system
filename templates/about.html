@@ -1,0 +1,58 @@
+{% extends "layout.html"%} {%block content%}
+<div class="hero about-us">
+  <div class="about-con">
+    <div class="heading">
+      <h1>About Us</h1>
+    </div>
+    <div class="about-content">
+      <div class="content">
+        <h2>Welcome To Our Website</h2>
+        <p>
+          focuses on the development of a cost-effective and efficient crop
+          disease detection system. By harnessing image analysis techniques and
+          machine learning, we aim to enable quick and accurate identification
+          of crop diseases. This innovation has the potential to significantly
+          improve agricultural practices, allowing farmers to detect and manage
+          diseases early, leading to higher yields and reduced environmental
+          impact.<br />
+        </p>
+
+        <div class="hideShow" id="showHide">
+          <div class="vision">
+            <p>
+              The vision for a crop plant disease detection system revolves around harnessing advanced technologies
+               to enhance agricultural practices and ensure food security. By employing computer vision and machine learning, 
+               this system aims to swiftly and accurately identify diseases affecting crop plants. 
+              
+            </p>
+            <div class="icon-vimi">
+            <i class="fa-solid fa-eye-low-vision"></i>
+            <h3>Vision</h3>
+          </div>
+        </div>
+        
+        <div class="mission">
+           <p>
+            The mission of a crop plant disease detection system is to help farmers by quickly and accurately
+             spotting diseases in their crops. Using advanced technologies like computer vision and machine learning,
+              the system aims to provide timely information for farmers to take action and manage their crops effectively.
+              
+            </p>
+            <div class="icon-vimi">
+              <i class="fa-solid fa-rocket"></i>
+            <h3>Mission</h3>
+          </div>
+        </div>
+        </div>
+        
+
+        <button class="button btn-learn" id="learnMore">Learn More</button>
+      </div>
+    </div>
+   
+  </div>
+  <div class="about-img">
+    <img src="{{url_for('static',filename='img/p26-white.png')}}" alt="">
+  </div>
+</div>
+{%endblock content%}

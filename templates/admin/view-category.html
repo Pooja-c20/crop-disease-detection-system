@@ -1,0 +1,35 @@
+{% extends "admin/admin-layout.html" %}
+{%block content%}
+
+<div class="view-list">
+  
+  <h2>Category List</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Title</th>
+      <th>Slug</th>
+      <th>Type</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+    {% if categories %}
+      {% for category in categories %}
+        <tr>
+          <td><button class="btn-admin btn-trash"><i class="fa fa-trash"></i></button></td>
+          <td><button class="btn-admin btn-edit"><i class="fa fa-edit"></i></button></td>
+          <td>{{ category[1] }}</td> 
+          <td>{{ category[2] }}</td>
+          <td>{{ category[3] }}</td>
+          <td>{{ category[4] }}</td>  
+          <td>{{ category[5] }}</td>   
+        </tr>
+      {% endfor %}
+    {% endif %}
+    
+  
+  </table>
+</div>
+
+{%endblock content%}

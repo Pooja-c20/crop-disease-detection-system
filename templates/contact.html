@@ -1,0 +1,50 @@
+{%extends 'layout.html'%} {%block content%}
+
+<div class="hero">
+    <div class="about-con contact-us">
+      <div class="heading">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="contain">
+        <div class="left">
+          <div class="tab-contact tab1">
+            <div class="icon">
+              <i class="fas fa-map-marker"></i>
+            </div>
+            <div class="txt">
+              <h3>Address</h3>
+              <p>46 sugar camp road,<br />Chembur,Mumbai,<br />55060</p>
+            </div>
+          </div>
+
+          <div class="tab-contact tab2">
+            <div class="icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="txt">
+              <h3>Phone</h3>
+              <p>507-345-7865</p>
+            </div>
+          </div>
+
+          <div class="tab-contact tab3">
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="txt">
+              <h3>Email</h3>
+              <p>smartfarmming@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="imag">
+            <img src="{{url_for('static', filename='img/p32')}}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {%endblock content%}

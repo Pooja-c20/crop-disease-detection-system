@@ -1,0 +1,35 @@
+{% extends "admin/admin-layout.html" %}
+{%block content%}
+ 
+  <form class="form1" action="{{url_for('addCategory')}}" method="post" >
+     <div class="hedding">Add Category</div>
+    <div class="success">{{msg}}</div>
+    <div class="form-group">
+      <input type="text" name="categoryTitle" class="form-control" placeholder="Category Title" id="titleId" required />
+    </div>
+    <div class="form-group">
+      <input type="text" name="categorySlug" class="form-control" placeholder="Category Slug" id="slugId" required/>
+    </div>
+    <div class="form-group">
+      <select name="categoryType"  class="form-control" required>
+        <option value="" selected disabled>Category Type</option>
+        <option value="Leaf">Leaf</option>
+        <option value="Fruit">Fruit</option>
+      </select>
+  
+    </div>
+   <div class="form-group">
+    <select name="status" class="form-control" required> 
+      <option selected disabled>Status</option>
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+   </div>
+   
+    <div class="form-group">
+      <button class="btn1" type="submit">Submit</button>
+    </div>
+  </form>
+
+{%endblock content%}
+

@@ -1,0 +1,27 @@
+{%extends 'layout.html'%} {%block content%}
+<div class="profile">
+  <div class="profile-container">
+    <div class="profile-header">
+      <h1>Profile</h1>
+    </div>
+    <div class="user-data">
+
+      <div class="profile-content">
+        <div class="user-details">
+          <h2>{{ user_data[1] }}</h2>
+          <p>Email : {{ user_data[2] }}</p>
+          <p>Date : {{ user_data[4] }}</p>
+        </div>
+      </div>
+
+      <div class="faicon">
+        <i class="fas fa-user"></i>
+      </div>
+
+    </div>
+    <div class="reset">
+      <button class="btn-reset-pass">Password Reset</button>
+    </div>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,39 @@
+{%extends 'layout.html'%} {%block content%}
+<div class="bcontainer">
+  <div class="fcontainer">
+    <form method="post" action="{{ url_for('feedbacksubmit')}}">
+      {% with messages = get_flashed_messages() %}
+       {% if messages %} 
+        {% for message in messages %}
+          <p class="msg successone">{{messages}}</p>
+        {% endfor %} 
+        {% endif %} 
+      {% endwith %}
+
+      <h1><b>Share Your experience</b></h1>
+      <div class="id">
+        <input type="text" placeholder="Full Name" name="name" required />
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="id">
+        <input type="text" placeholder="Email Address" name="email" required />
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="id">
+        <input type="text" placeholder="Was our System helpful for you?" name="question" required />
+        <i class="fas fa-question"></i>
+    </div>
+      <textarea
+        cols="15"
+        rows="5"
+        placeholder="Enter your opinion here..."
+        name="message"
+      ></textarea>
+
+      <div>
+        <button class="fbtn" type="submit"><b>Send</b></button>
+      </div>
+    </form>
+  </div>
+</div>
+{%endblock content%}

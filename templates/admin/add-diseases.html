@@ -1,0 +1,37 @@
+{% extends "admin/admin-layout.html" %}
+{%block content%}
+ 
+  <form class="form1" action="{{url_for('saveDisease')}}" method="post" >
+     <div class="hedding">Add Dieases</div>
+     <div class="success">{{msg}}</div>
+    <div class="form-group">
+      <input type="text" name="diseaseTitle" class="form-control" placeholder="Disease Title" id="titleId" required />
+    </div>
+    <div class="form-group">
+      <input type="text" name="diseaseSlug" class="form-control" placeholder="Disease Slug" id="slugId" required/>
+    </div>
+    <div class="form-group">
+      <select name="diseaseCategory"  class="form-control" required>
+        <option value="" selected disabled>Select Category</option>
+        {% if categories %}
+          {% for category in categories %}
+            <option value="{{ category[1] }}">{{ category[1] }}</option>
+          {% endfor %}
+        {% endif %}
+      </select>
+  
+    </div>
+   <div class="form-group">
+    <select name="status" class="form-control" required> 
+      <option selected disabled>Status</option>
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+   </div>
+   
+    <div class="form-group">
+      <button class="btn1" type="submit">Submit</button>
+    </div>
+  </form>
+
+{%endblock content%}

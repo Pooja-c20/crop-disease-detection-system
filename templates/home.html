@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{%block content%}
+<section>
+
+  <!-- Slider main container -->
+<div class="slider-container swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="{{url_for('static',filename='img/slide1.jpg')}}" alt="Slide 1"></div>
+    <div class="swiper-slide"><img src="{{url_for('static',filename='img/slide2.jpg')}}" alt="Slide 1"></div>
+    <div class="swiper-slide"><img src="{{url_for('static',filename='img/slide3.jpg')}}" alt="Slide 1"></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+  <div class="upload-container upload-box">
+      <div class="box1">
+          <h1>Crop Plants Diseases Detection & Solution</h1>
+          <h3>A digital platform that provides a solution for diseased crop leaves.</h3>
+      </div>
+      <div id="imagePreview"></div>
+      <div class="box2">
+          <label for="imageInput" id="uploadLabel">Upload File</label>
+          <input type="file" id="imageInput" style="display: none" accept="image/*" onchange="previewImage()"/>
+          <button id="submitBtn" onclick="submitForm()">Submit</button>
+      </div>
+  </div>
+
+</section>
+{%endblock content%}
